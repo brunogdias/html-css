@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Exemplo de Hover</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div p {    /* Significa que o(s) parágrafo(s) dentro da tag div terão os estilos definidos abaixo. */ 
+            display: none;   /* forma de exibição: ñ mostrar (none) */
+        }
+
+        div:hover {    /* hover = pairar/flutuar em português. É aplicado o(s) estilo(s) definidos abaixo quando passa a seta do mouse por cima, neste caso, da(s) div('s) */
+            color: red;
+        }
+
+        div:hover > p {   /* Significa que o estilo definido abaixo será aplicado no(s) parágrafo(s) que estiver(em) dentro da tag div quando passar a seta do mouse por cima (hover). O sinal > significa children, ou seja, o parágrafo é como o filho da div, mas não é opcional o uso. */
+            display: block;   /* a opção block é para exibir, neste caso a  tag p   que está dentro da tag  div  */
+            color: white;
+            background-color: red;
+            width: 300px
+        }
+        /* lembrando que body, div p, div:hover, div:hover > p  são seletores e tudo dentro deles são declarações (propriedades + valores)*/
+    </style>
+</head>
+<body>
+    <h1>Exemplo de hover</h1>
+   <p> Passe o mouse sobre o texto abaixo:</p>
+    <div> 
+        Passe o mouse aqui
+        <p>TEXTO ESCONDIDO...</p>
+    </div>
+    <p>Fim do exemplo.</p>
+</body>
+</html>
+
+<!-- Pseudo-classes são palavras que definem estados de elementos dentro da HTML. Utiliza-se :  -->

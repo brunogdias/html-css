@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;  /*   o código vai tentar buscar a fonte compatível no navegador/app de acordo com a ordem das fontes. Além disso, as fontes famílias (font-family) costumam trazer vários grupos com três combinações pré-definidas. Basta escolher uma.  */
+          font-size: 16px;
+            /* Existem dois tipos de medidas de fontes (font-size):
+            a) Medidas absolutas: px, cm, mm, in (inch / polegada), pt (pontos), pc (paica)   
+            b) Medidas relativas: em, ex, rem, VW, vh, %
+            obs¹. As medidas recomendadas para uso são: px (absoluta) e em (relativa)      
+            obs.² 16px geralmente é igual a 1em. Já 2em é igual 36px. O em duplica o pixel a partir 16px. */
+          font-weight: normal; /* lighter, normal, bold e bolder. Também pode utlizar de 100 a 900 apertando as teclas ctrl+ space. Talvez nem todos os efeitos possam ser visíveis de acordo com a font-family escolhida */
+          font-style: italic; 
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif, sans-serif;
+            font-weight: bolder;
+            font-size: 3em;
+            font-style: italic;
+            text-decoration: underline; /* efeito de sublinhado */
+          
+            /* existe uma combinação/propriedade para juntar todas essas fontes acima, chamada "shorthand font". Primeiro coloca font-style, depois font-weight, depois font-size e font-family, vejamos: */
+            font: italic bolder 3m Arial, Helvetica, sans-serif, sans-serif;
+            /* Não é obrigatório usar as 04 combinações. Vejamos exemplo no h2 abaixo:*/
+        }
+
+       #paragrafo1 { /*  id = # em css */
+            text-decoration: underline overline #FF3028; /* efeito de sublinhado duplo (em cima e em baixo com cor) */
+        }
+      
+        #paragrafo2 { /*  id = # em css */
+            text-decoration: green wavy underline; /* efeito de sublinhado em curva */
+        }
+
+        h2 {
+            font: bold 2em Arial;
+            text-decoration: underline; /* efeito de sublinhado */
+        }
+
+        
+         /* lembrando que body, h1 e h2 são seletores e tudo dentro deles são declarações (propriedades + valores) */
+        
+    </style>
+</head>
+<body></body>
+    <h1>Trabalhando com Fontes</h1>
+    <p id="paragrafo1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quidem eius qui. Cumque natus dolore doloremque quae, distinctio exercitationem voluptates. Alias explicabo provident perspiciatis autem, voluptates quisquam tenetur sit est.
+    <p id="paragrafo2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, sequi? Earum dolore asperiores numquam eaque optio vero, vitae adipisci voluptates ducimus, deleniti a necessitatibus quod culpa aliquid exercitationem. Repudiandae, maxime.</p>
+    <h2>Subtitulo do exercício </h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo incidunt, aut eum quia minus modi obcaecati iure vel veritatis hic recusandae exercitationem possimus quasi, quas sit repudiandae natus accusantium distinctio!</p>
+</body>
+</html>

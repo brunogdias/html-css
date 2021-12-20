@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Gradiente em CSS</title>
+    <style>
+        * { /*  Configurações globais das CSS  */
+            height: 100%;
+        }
+        body {
+            background-image: linear-gradient(225deg, #4664C9 10%, #7841C9, #B136AB, #F04C5B, #FF9B4A); /*permite criar cores em gradientes lineares. Opções: to right, to left, to top e to bottom ou em graus: 10deg, 90deg, 180deg, 196deg, 225deg, -33deg, -310deg... Também pode colocar a porcentagem que a cor pegará da tela, basta colocar logo após a cor.  */
+            
+            background-attachment: fixed; /*  mantem o fundo fixo em toda tela mesmo com rolagem */
+        }
+
+        /*
+        Também é possível alterar o gradiente linear para radial, usando:
+        background-image: radial-gradient(circle, #4664C9, #7841C9, #B136AB, #F04C5B, #FF9B4A);
+        */
+
+        /* lembrando que body é seletor e tudo dentro dele é declaração (propriedades + valores)*/
+
+    </style>
+</head>
+<body>
+    <h1>Testando Gradiente em CSS dentro da tag style</h1>
+</body>
+</html>

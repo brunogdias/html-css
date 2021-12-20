@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+            margin: 0px; 
+        }
+
+        header {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        h1 {
+            box-shadow: insert 2px 1px 14px 6px rgba(0, 0, 0, 0.5)  /* medidas da sombra: descolamento horizontal, desloc. vertical, intensidade mancha, tam. espalhamento e cor sombra. O insert indica que a sombra é interna (frente) e não posterior igual a sombra logo abaixo em  nav  */
+        }
+
+        nav {
+            background-color: rgb(102, 102, 102);
+            padding: 3px;
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.315)  /* medidas da sombra: descolamento horizontal, desl. vertical, intensidade mancha, tam. espalhamento e cor sombra */
+        }
+
+        nav > a {     /* tag   a   está dentro de nav, portanto usa-se > a, mas não é opcional.  */
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+
+        nav > a:hover {     /* tag   a   está dentro de nav, portanto usa-se > a, as não é opcional.  Já hover é o efeito/estilo que é aplicado ao se passar a seta do mouse sobre o conteúdo da tag  a.  */
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: white;
+            padding: 10ox;
+            margin: 10px;
+            border-radius: 10px 0px;  /* configura a borda da caixa da tag main. É possível configurar com tamanhos diferentes cada lado da borda usando 4 medidas diferentes, em dupla como foi feito e uma única configuração para todas. */ 
+            box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.384); /* medidas da sombra: descolamento horizontal, desl. vertical, intensidade mancha, tam. espalhamento e cor sombra */
+        }
+
+        #assuntos > p {  /*  lembrando que também poderia usar div#assuntos. O sinal > é opcional.   */
+            padding: 5px;
+            padding-top: 20px;
+            padding-left:0.5px;
+            margin: 8px;
+            margin-left: 4px;
+            
+        }
+
+        article {
+            background-color: lightgray;
+            padding: 5px;
+        }
+
+        article > aside {  /* tag aside está dentro de article, portanto usa-se > aside, , mas não é opcional.  */
+            background-color: rgb(165, 165, 165);
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 4px;
+            margin: 0px;
+        }
+
+        footer > p {    /* tag  p  está dentro de footer, portanto pode-se usar o sinal  > (mas é opcional) */
+            margin: -3px
+        }
+
+        #bola {     /*  lembrando que também poderia usar div#bola   */
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 50%;  /*  pode-se usar % com esse parâmetro  */
+        }
+        /* lembrando que body, header, h1, nav e etc  são seletores e tudo dentro deles são declarações (propriedades + valores)*/
+    </style>
+</head>
+
+
+<!--  Abaixo está a forma de organizar semanticamente um código/conteúdo:  -->
+
+<body>
+    <header>  <!-- é o cabeçalho de uma página. Não é o mesmo que head-->
+        <h1>Meu site</h1>
+            <nav>   <!-- tag usada para navegação dos links -->
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+            </nav>
+    </header>
+    <main>  <!-- conteúdo principal. -->
+        <section id="assuntos">  <!-- tag section permite separar os conteúdos principais por sessões-->
+               <p>Esportes Política Tecnologia</p>     
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Noticias sobre o Brasil</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, modi minima porro natus beatae reprehenderit et sequi? Itaque, fugit a reiciendis pariatur molestias quis quod quam aut blanditiis ab eligendi.</p>
+                <aside>  <!-- tag que separa uma parte do conteúdo do restante. É um contéudo à parte/complementar (semântica)-->
+                    <p> Artigo escrito por jose da Silva.</p>
+                </aside>
+            </article>            
+        </section>
+    </main>
+    <footer> <!-- rodapé de uma página-->
+        <p>Desenvolvido pelo CursoemVídeo</p>
+    </footer>
+    <div id="bola"></div>
+</body>
+</html>

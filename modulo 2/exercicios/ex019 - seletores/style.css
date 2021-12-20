@@ -1,0 +1,45 @@
+@charset "UTF-8"; /* para não ter problema com acentuação e caracteres especiais*/
+
+/* 
+Obs¹. Tudo em HTML for "id" em CSS é "#" (orienta-se usar um elemento)
+Obs². Tudo em HTML for "class" em CSS é "." (pode utilizar vários elementos)
+ */
+
+body {
+    background-color: #d6fde9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#principal {      /* conforme criado no arquivo html, permite diferenciar o h1 com o identificador (id) chamado "principal", permitindo aplicar estilos diferentes dos demais */ 
+    text-align: center;  
+    color: white;
+    background-color: #3c805e;
+}
+
+h1 {
+    color: #1e402f;
+}
+
+h2 {
+    color: #3c805e;
+}
+
+.basico {      /* é o class="basico" do HTML */
+    color: #3c805e;
+    
+}
+
+.intermediario {
+    color: #807b3c;
+}
+
+.avancado {
+    color: #803c3c;
+}
+
+.destaque {
+    background-color: #c5c56070;
+}
+
+
+/* lembrando que body, h1, #principal, h2, .basico e etc são seletores e tudo dentro deles são declarações (propriedades + valores)*/

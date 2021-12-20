@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Fontes Externas Baixadas</title>
+    <style>
+        @font-face {            /* tag @font-face utilizada para incluir fontes externas baixadas, ou seja, as fontes devem estar na mesma pasta/servidor deste documento */
+            font-family: 'Love'; /* Nesse campo pode criar um nome que desejar para a fonte baixada que poderá ser usado nos seletores abaixo. Foi criado nome 'Love' */
+            src: url('fonts/love larry.ttf') format('truetype');  /*  Url é o local/pasta que está o arquivo. Tipos de format() de acordo com a extensão do arquivo da fonte: a)opentype (otf)  b)truetype (ttf)  c)embedded-opentype  d)truetype-aat e) svg  */            
+        }
+
+        @font-face { font-family: 'Android'; src: url('fonts/ANDROID\ ROBOT.ttf') format('truetype');}
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            font-family: 'Love', Times, serif;  /* a fonte 'Love' foi a criada no código acima (@font-face), após baixar a fonte */
+            font-size: 3em;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        #testefonte {
+            font-family: 'Android', Times, serif;  /* a fonte 'Android' foi a criada no código acima (@font-face), após baixar a fonte */
+        }
+
+        /* lembrando que body e h1 são seletores e tudo dentro deles são declarações (propriedades + valores)*/
+
+        /* Pode-se usar fontes externas ( @import url ) e baixadas (@font-face) no mesmo código e aplicar cada uma nas seletores desejadas.*/
+
+    </style>
+</head>
+<body>
+    <h1>Olá Mundo!</h1>
+    <p id="testefonte">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolore labore, ipsa tempora, aspernatur molestiae eligendi repellat tenetur ullam voluptas cupiditate dolorum explicabo maxime iusto praesentium? Aperiam possimus placeat amet.</p>
+</body>
+</html>

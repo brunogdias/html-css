@@ -1,0 +1,37 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir essse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+    <picture> <!--permite incluir novos recursos para trabalhar com imagens-->
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px )" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+
+    <!--os códigos dentro das tags pictures permite trabalhar a exibição de três tamanhos de imagens (três imagens iguais, porém tamanhos diferentes salvas em uma mesma pasta) para que possam ser exibidas de acordo com o tamanho da tela. A ordem deve ser (de baixo p/ cima): o código "base"" com a maior imagem e acima vai adicionando as versões menores da imagem.-->
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <audio src="midia/bike_rides.mp3" controls ></audio> <!--parâmetro controls permite exibir um botão de play na página do site--> <!--formatos de audio normalmente compatíveis com os navegadores: MP3 WAV OGG-->
+
+    <audio preload="metadata" controls loop> <!--"metadata" exibi algumas pré informações sobre o audio. "loop" o audio sempre ficará reiniciando-->
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.ogg" type="audio/ogg">
+        <source src="midia/guanacast-33.wav" type="audio/wav"> <!--evite formato wav são pesados-->
+        <p>Infelizmente seu navegador não consegue reproduzir áudio</p>
+        <a href="midia/guanacast-33.mp3">Clique aqui para baixar o arquivo MP3</a>
+    </audio>
+
+    <!--os códigos dentro das tags audio permite que a página tente carregar o mesmo áudio (de cima p/ baixo) nos formatos indicados. Por fim, caso não consiga, será exibida a mensagem ao final-->
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Links Personalizados</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a {
+            color: red;
+            text-decoration: none;  /* esse efeito retira o sublinhado automatico dos links  */
+            font-weight: bold; /* feito negrito */
+        }
+        a:visited {         /* todo link, tag a, visitado quando clicado terá o estilo abaixo. Lembrando que "a:visited" é uma pseudo-classe. */
+            color: darkblue;
+        }
+
+        a:hover {     /* será aplicado o(s) efeitos(s) abaixo ao passar a seta do mouse sobre (hover) o link (tag  a), vejamos: */ 
+            text-decoration: underline;   /* esse efeito coloca o sublinhado nos links (a) ao passar (hover) a seta do mouse sobre eles */
+            color: black;  /* esse efeito deixa o texto preto nos links (a) ao passar (hover) a seta do mouse sobre eles */
+        }
+
+        a:active {     /* será aplicado o(s) efeitos(s) abaixo durante o clique com a seta do mouse no link (tag  a), vejamos: */ 
+            color: yellow;    
+        }
+
+        a::before {        /*  significa: "antes dos links", será aplicado:   */
+            content: '⇒';  /* contet = conteúdo */
+        }
+
+        a::after {        /* significa: "depois/após os links, será aplicado:  */
+            content: '⇐';  /* contet = conteúdo */
+        }
+
+        /* Os :: significa pseudo-elemento. Eles podem também ser combinados as pseudos classes */
+        /* lembrando que body, a, a:visited, a:hover e etc  são seletores e tudo dentro deles são declarações (propriedades + valores)*/
+     </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li> <a href="https://gustavoguanabara.github.io" target="_black">Repositório GitGub</a></li>
+        <li> <a href="https://youtube.com/cursoemvideo/" target="_black">Canal do YouTube</a></li>
+        <li> <a href="https://www.cursoemvideo.com" target="_black">Site do CursoemVídeo</a></li>
+    </ul>
+</body>
+</html>
+
+<!-- Portanto, pseudo-elementos são palavras que definem estados de outros elementos dentro da HTML. Utiliza-se ::  -->
+<!-- Pseudo-classes são palavras que definem estados de elementos dentro da HTML. Utiliza-se : (dois-pontos)   -->
+
+
+<!--
+RESUMO
+
+Seletores Personalizados:
+
+# = id
+. = class
+: = pseudo-class
+:: = pseudo-element
+> = children (uso opcional)
+
+
+-->

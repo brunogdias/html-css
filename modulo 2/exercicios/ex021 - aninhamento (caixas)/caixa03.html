@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Borda personalizada</title>
+    <style>
+        h1 {
+            border: 9px solid transparent;
+            padding: 10px;
+            border-image-source: url('borda.png'); /* para incluir bordar através de uma imagem png externa*/
+            border-image-slice: 27; /* para fatiar a bordar (imagem) criada com parâmetro de cima  */
+            border-image-repeat: repeat;  /* repete o desenho da bordar colocando mais efeitos. Há tb a opção stretch (alongamento/estender)  */
+    
+            /* a propriedade border-image... pode ser também reduzido, seguindo a ordem: source, slice, repeat. Vejamos:  */
+            border-image: url('borda.png') 27 repeat;
+
+            /* observação: a primeira propriedade border deve existir para as demais funcionarem*/ 
+        }   
+        /* lembrando que h1 é um seletor e tudo dentro dele é declaração (propriedades + valores)*/
+    </style>
+</head>
+<body>
+    <h1>Teste de Borda Personaliza Usando uma Imagem Externa</h1>
+</body>
+</html>

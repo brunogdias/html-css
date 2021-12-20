@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor.</p>
+    <video width="560" poster="imagens/time lapse.jpg" controls loop autoplay> 
+        <source src="midia/Meu Video-1.m4v" type="video/mp4"> 
+        <source src="midia/Meu Video-1.ogv" type="video/ogg">
+        <source src="midia/Meu Video-1.webm" type="video/webm">
+        <p>Seu navegador não  tem compatibilidade com reprodução de vídeos.</p>
+    </video>
+    <!-- tag vídeo, similar a tag audio, permite inserir vídeos na página. O parãmetro width permite ajustar o tamanho do vídeo na tela. O parâmetro poster permite colocar uma imagem de capa para o vídeo quando ele não está sendo reproduzido. O parâmetro controls exibe os botões de controle no vídeo na tela. A tag loop faz o vídeo sempre repetir. A tag source dentro da tag vídeo permite confirgurar o vídeo: pasta que ele se encontrar, formato de vídeo, preferência de exibição (na ordem de cima para baixo)-->
+
+    <h1>Inserindo vídeos do YouTube</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/eF9Qoc6p_4Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <h1>Inserindo vídeos do Vimeo</h1>
+    <iframe src="https://player.vimeo.com/video/197093965?h=7fbc516b5a&autoplay=1&loop=1&color=ff9933&portrait=0" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  
+</body>
+</html>

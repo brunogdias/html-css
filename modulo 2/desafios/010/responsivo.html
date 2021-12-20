@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Responsividade</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+
+        main{
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+
+            min-width: 280px;
+            max-width: 800px;
+            /* width é o tamanho máximo e mínimo proposta para o conteúdo ser exibido na tela */
+            margin: auto; /* alinha o conteúdo ao centro mesmo aumentando ou diminuindo o tamanho da tela  */
+        }
+
+        img {
+            width: 100%; /* permite a imagem se ajustar a 100%  de seu tamanho de acordo com a proporção do tamanho da tela. Com isso permite a imagem aumentar ou diminuir automaticamente de acordo com o tamanho/ajuste da tela */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 style=color:blue >Testando Responsividade</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, ipsum nesciunt odit autem aut alias doloribus nemo consequatur iste harum eos ipsam similique repudiandae molestiae laboriosam mollitia error molestias expedita? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit ad voluptatem ea voluptatibus beatae, quisquam enim fugiat quo dolorem iusto voluptate eum totam fuga alias earum ipsa sequi inventore quam.Lorem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore expedita quas atque dolores impedit aspernatur ipsa cum? Sit nesciunt inventore rem praesentium porro. Similique enim dolorem autem commodi rerum! Fugiat!</p>
+        <picture> 
+            <source media="(max-width: 600px)" srcset="imagens/irina-blok-pq.jpg">
+            <img src="imagens/irina-blok.jpg" alt="Irina Block">
+        </picture>
+        <!-- colocando img dentro da tag picture, permite incluir mais configurações sobre a imagem, como foi o caso de source para quando a tela de exibição mostre a imagem descrita em srcset até atingir 600px--> 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, ipsum nesciunt odit autem aut alias doloribus nemo consequatur iste harum eos ipsam similique repudiandae molestiae laboriosam mollitia error molestias expedita? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit ad voluptatem ea voluptatibus beatae, quisquam enim fugiat quo dolorem iusto voluptate eum totam fuga alias earum ipsa sequi inventore quam.Lorem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore expedita quas atque dolores impedit aspernatur ipsa cum? Sit nesciunt inventore rem praesentium porro. Similique enim dolorem autem commodi rerum! Fugiat!</p>
+    </main>
+</body>
+</html>
