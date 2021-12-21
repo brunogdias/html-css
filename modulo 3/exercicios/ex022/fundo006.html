@@ -5,24 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Document</title>
+    <title>Fundo Fixo de tela</title>
     <style>
         body {
+            background: black url('imagens/wallpaper002.jpg') center center no-repeat cover fixed
+            height: 100vh;
             background-color: black;
             background-image: url('imagens/wallpaper002.jpg');   
             background-position: center center;    
             background-repeat: no-repeat;   
             background-size: cover; /* cobre a tela/viewport sem destorcer a imagem (com pequenos cortes da imagem quando necessário */
-            height: 100vh;  
+            background-attachment: fixed;  /* attachment = vínculo/ligação. Permite que a imagem de fundo atue de acordo com o valor escolhido. A opção scroll a imagem de fundo rola junto com a tela (quando usa barra de rolagem lateral). A opção fixed a imgem de fundo não irá rolar e se manterá fixa. */
+
+            /*   combinando sempre height: 100vh   background-size: cover    background-attachment: fixed    a imagem de fundo cobrirá toda a tela sem destorcer (independente do tamanho) e ficará fixa nas rolagens.   */
+
+            /* 
+            Shorthand - background 
+            
+            Ordem: color > image > position > repeat > size¹ > attachment
+            
+            Exemplo: 
+            background: black url('imagens/wallpaper002.jpg') center center no-repeat cover fixed;
+
+            ¹Caso não funcione, a propriedade background-size deverá ser retirada do shorthand e aplicada separadamente.
+            */ 
         }
 
         main {
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
             border: 1px solid darkblue;
             border-radius: 15px;
+            text-align: justify;
         }
 
 /* lembrando que os termos em amarelho são seletores e tudo dentro deles são declarações (propriedades + valores)  */
@@ -31,6 +47,8 @@
 <body>
     <main>
         <h1>Teste de Imagem de Fundo</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id corrupti aperiam ipsa, saepe vitae quod temporibus veniam pariatur omnis laborum repellat autem porro magnam distinctio maxime et, quidem unde alias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, corporis officia vero similique mollitia omnis voluptate laudantium architecto inventore dolore provident qui pariatur quae. Veritatis eveniet non facilis explicabo dolorem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam accusantium odit dolores, et, voluptatem quae distinctio, odio ad libero reprehenderit deserunt iure aliquam assumenda mollitia nesciunt impedit dolore quaerat quod.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id corrupti aperiam ipsa, saepe vitae quod temporibus veniam pariatur omnis laborum repellat autem porro magnam distinctio maxime et, quidem unde alias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, corporis officia vero similique mollitia omnis voluptate laudantium architecto inventore dolore provident qui pariatur quae. Veritatis eveniet non facilis explicabo dolorem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam accusantium odit dolores, et, voluptatem quae distinctio, odio ad libero reprehenderit deserunt iure aliquam assumenda mollitia nesciunt impedit dolore quaerat quod.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id corrupti aperiam ipsa, saepe vitae quod temporibus veniam pariatur omnis laborum repellat autem porro magnam distinctio maxime et, quidem unde alias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, corporis officia vero similique mollitia omnis voluptate laudantium architecto inventore dolore provident qui pariatur quae. Veritatis eveniet non facilis explicabo dolorem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam accusantium odit dolores, et, voluptatem quae distinctio, odio ad libero reprehenderit deserunt iure aliquam assumenda mollitia nesciunt impedit dolore quaerat quod.</p>
     </main>
 </body>
