@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+* { /*  configuração global  */
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body { /* pode-se configurar ao mesmo tempo duas declarações p/ ñ precisar repetir as propriedades */
+    background-color: darkgrey;
+    min-height: 100%; /* o tamanho mínimo do body/corpo será de 100% da tela. Pode-se usar tb 100vh (viewport height)  */
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+header h1 {
+    font-variant: small-caps; /* deixa todas as letras maiúsculas, porém com a primera letra de cada paalavra um pouco maior. Caso queira deixar todas em caixa alta idênticas, basta usar text-transform: uppercase;  */ 
+}
+
+a {
+    color: white;
+    text-decoration: none; /* para retirar os sublinhado dos links */
+    font-weight: bolder; /* para deixar em negrito */
+    /* caso existissem outros links no texto que não fossem receber os estilos acima, a declaração deveria ser no seguinte formato:    header a, footer a    pois assim, os estilos se manteriam somente no cabeçalho e rodapé.  */
+}
+
+a:hover { /* aplica os estilos abaixo quando passa a seta do mouse sobre, neste caso, os links */
+    text-decoration: underline;
+    /* caso existissem outros links no texto que não fossem receber o estilo acima, a declaração deveria ser no seguinte formato:    header a:hover, footer a:hover    pois assim, o estilo se manteria somente no cabeçalho e rodapé.  */
+}
+
+section {
+    padding-top: 10vh; /* vh = viewport height */
+    padding-bottom: 10vh;
+    /* esses estilos criaram bordas em todas seções ampliando a distância entre elas. Isso permitirá fazer eo feito de parallax (imagens de fundo diferntes enquanto rola a página de acordo com as estrofes do poema  */
+    line-height: 2em; /* cria um espaçamento entre cada linha dentro das section's  */
+    padding-left: 30px ; /* cria uma borda somente do lado esquerdo afastando o texto um pouco da borda */
+}
+
+.normal {
+    background-color: white;
+    color: black;
+}
+
+.imagem {
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+.imagem p {
+    background-color: rgba(0, 0, 0, 0.253);
+    width: 400px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* lembrando que os termos em amarelo são seletores e tudo dentro deles são declarações (propriedades + valores)  */
+
+/* 
+class =  . 
+id =     #
+*/
