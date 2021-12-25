@@ -7,17 +7,33 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Alinhamento Vertical</title>
     <style>
-        #conteiner{
+        #container{
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+            
+            position: relative; /* utiliza-se essa propriedade para trabalhar a  posição do objeto interno em relação a essa caixa. Nesse exemplo o objeto interno é a declaração #conteudo logo abaixo. */
             height: 500px;
+            padding: 10px;
             background-color: purple;
         }
 
         #conteudo{
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+            
             height: 200px;
+            width: 400px;
             background-color: yellow;
+            
+            position: absolute; /* utiliza-se essa propriedade em conjunto com a propriedade position: relative da caixa (acima)  quando se deseja trabalhar a posição entre caixa e objeto interno */
+            left:50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+            /* Para que se colocar um objeto interno em diversas posições em relação a caixa é preciso colocar a propriedade position:absolute e então será possível utilizar as propriedades left / right / top / botom. Pode-se usar os valores em pixel como em % para essas propriedades.  */
+            /* Já a propriedade transform: translate() ela permite o objeto se alinhar perfeitamente a caixa quando utilizado os valores anteriores em negativo.   */
         }
 
-        /* lembrando que os termos em amarelho são seletores e tudo dentro deles são declarações (propriedades + valores)  */
+            /* lembrando que os termos em amarelo são seletores e tudo dentro deles são declarações (propriedades + valores)  */
     </style>
 </head>
 <body>
