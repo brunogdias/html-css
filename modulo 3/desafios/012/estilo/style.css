@@ -1,5 +1,16 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Corinthia&family=Passion+One:wght@400;700;900&display=swap'); /* fonte importada do Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap'); /* fonte importada do Google Fonts */
+
+:root { /* seletor raiz onde é possível criar declarações */
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif; /* a palavra fonte1  foi criada e modificada */
+    --fonte2: 'Berkshire Swash', cursive;
+    --fonte3: 'Sriracha', cursive;
+
+}
+
 * { /*  configuração global  */
     margin: 0px;
     padding: 0px;
@@ -8,6 +19,7 @@
 html, body { /* pode-se configurar ao mesmo tempo duas declarações p/ ñ precisar repetir as propriedades */
     background-color: darkgrey;
     min-height: 100%; /* o tamanho mínimo do body/corpo será de 100% da tela. Pode-se usar tb 100vh (viewport height)  */
+    font-family: var(--fonte1); /*   esses valores foram criados em :root  */
 }
 
 header {
@@ -19,6 +31,8 @@ header {
 
 header h1 {
     font-variant: small-caps; /* deixa todas as letras maiúsculas, porém com a primera letra de cada paalavra um pouco maior. Caso queira deixar todas em caixa alta idênticas, basta usar text-transform: uppercase;  */ 
+    font-family: var(--fonte2);
+    font-size: 5vw; /*  significa 10% em relação a largura da tela. Então se a tela aumentar ou diminuir, será mantido o tamanho da fonte sempre em 10% em relação a largura dela.  vw = viewport width */
 }
 
 a {
@@ -39,6 +53,8 @@ section {
     /* esses estilos criaram bordas em todas seções ampliando a distância entre elas. Isso permitirá fazer eo feito de parallax (imagens de fundo diferntes enquanto rola a página de acordo com as estrofes do poema  */
     line-height: 2em; /* cria um espaçamento entre cada linha dentro das section's  */
     padding-left: 30px ; /* cria uma borda somente do lado esquerdo afastando o texto um pouco da borda */
+    font-family: var(--fonte3);
+    font-size: 2vw; /*  significa 5% em relação a largura da tela. Então se a tela aumentar ou diminuir, será mantido o tamanho da fonte sempre em 5% em relação a largura dela.  vw = viewport width */
 }
 
 .normal {
@@ -53,7 +69,8 @@ section {
 
 .imagem p {
     background-color: rgba(0, 0, 0, 0.253);
-    width: 400px;
+    display: inline-block; /* faz com que a caixa criada com o background-color se adapte com o tamanho do texto */
+    padding: 10px;
 }
 
 footer {
