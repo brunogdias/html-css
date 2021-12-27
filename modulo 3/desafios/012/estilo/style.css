@@ -57,6 +57,10 @@ section {
     font-size: 2vw; /*  significa 5% em relação a largura da tela. Então se a tela aumentar ou diminuir, será mantido o tamanho da fonte sempre em 5% em relação a largura dela.  vw = viewport width */
 }
 
+section p {
+    padding-bottom: 1em; /* com essa configuração foi possível separar as estrofes que estão em uma mesma section porém em tag's  p  separadas  no HTML */
+}
+
 .normal {
     background-color: white;
     color: black;
@@ -64,13 +68,26 @@ section {
 
 .imagem {
     background-color: rgb(51, 51, 51);
-    color: white;
+    color: white; 
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);    /* tipo encaixe com descolamento lateral e vertical, espalhamento, ampliação e cor */
+    background-size: cover; /* cobrir todo o background com a imagem inserida. Nesse caso será aplicado em toda tag no html que estiver com class = imagem */ 
+    background-attachment: fixed; /* fixa todo background inserido na tag com class=imagem quando rola a página. Nesse exemplo, as imagens inseridas ficarão fixas quando rolar a tela, causando o efeito parallax (objetos parecerem estar em diferentes posições, direções ou tamanhos quando observados em diferentes posições).  */
 }
 
 .imagem p {
-    background-color: rgba(0, 0, 0, 0.253);
-    display: inline-block; /* faz com que a caixa criada com o background-color se adapte com o tamanho do texto */
+    background-color: rgba(0, 0, 0, 0.514);
+    text-shadow: 1px 1px 0px black; /* descolamento lateral e vertical, espalhamento e cor */ 
+    display: inline-block; /* faz com que a caixa criada com o background-color se adapte com o tamanho do texto de acordo com o tamanho da tela */
     padding: 10px;
+}
+
+#img01 {
+    background-image: url('../imagens/background001.jpg'); /* os dois ponto seguidos (..) é para indicar que a pasta imagens é uma pasta anterior ou que a pasta ñ está dentro da pasta que se encontra o arquivo style.css */
+    background-position: right center; /* permite posicionar a imagem a partir dos valores definidos, neste caso, a partir do centro lado direto */
+}
+
+#img02 {
+    background-image: url('../imagens/background002.jpg');
 }
 
 footer {
@@ -83,7 +100,4 @@ footer {
 
 /* lembrando que os termos em amarelo são seletores e tudo dentro deles são declarações (propriedades + valores)  */
 
-/* 
-class =  . 
-id =     #
-*/
+/*   class = .       id =  #    */
