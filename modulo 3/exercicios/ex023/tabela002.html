@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,6 +28,12 @@
             color: white;
         }
 
+        thead { /* os estilos criados abaixo permitem fixar o cabeçalho no inicio da tela quando a planilha é rolada para baixo */
+            position: sticky; /* valor sticky = colar */
+            top: 0; /* o valor 0 indica a distância de colagem em relação ao topo da tela */
+            background-color: gray; /* será a cor de fundo quando o cabeçalho for colado*/
+        }
+
         tbody tr:nth-child(2n) { /* todas linhas (tr) dentro de tbody receberá o(s) estilo(s) abaixo em duas em duas linhas (2n). Nova pseudo-classe    :nth-child()   */   /* No lugar de 2n pode-se, por exemplo, colocar odd = ímpar ou even = par, deixando com o estilo abaixo somente linhas ímpares ou pares. */
             background-color: lightgray;
         }
@@ -49,11 +55,11 @@
     <h1>Uso de tablas grandes</h1>
 
     <table>
-        <caption>População das Unidades Federativas</caption>
-        <thead>
-            <tr> <!-- tag utilizada p/ criar uma linha de daods de uma tabela -->
-                <th scope="col">Estado</th> <!-- tag que representa cabeçalho de dados de uma tabela. Propriedade scope informa para o cabeçalho (th) Estado que os dados estão em coluna, ou seja, abaixo dele. -->
-                <th scope="col" style="width: 50px;">População</th> <!-- Propriedade style foi utilizada pontualmente para ajustar a largura da coluna População-->
+        <caption>População das Unidades Federativas</caption> <!-- tag que representa a legenda / título pricipal -->
+        <thead> <!-- cabeçalho / título da cada coluna -->
+            <tr> <!-- tag utilizada p/ criar uma linha de dados de uma tabela -->
+                <th scope="col">Estado</th> <!-- tag que representa cabeçalho de dados de uma tabela. Propriedade scope informa para o cabeçalho (th) Estado que os dados estão em coluna, ou seja, abaixo dele (semântica). -->
+                <th scope="col" style="width: 50px;">População</th> <!-- Propriedade style foi utilizada pontualmente para ajustar somente a largura da coluna População-->
 
             </tr>
         </thead>
@@ -82,26 +88,122 @@
                 <td>Rio Grande do Sul</td>
                 <td class="num">11.377.239</td>
             </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th scope="row">Total de Habitantes</th> <!-- Propriedade scope informa para o cabeçalho (th) Total de Habitantes que os dados estão em linha, ou seja, à frente dele. -->
+                <th scope="row">Total de Habitantes</th> <!-- Propriedade scope informa para o cabeçalho (th) Total de Habitantes que os dados estão em linha, ou seja, à frente dele (semântica). -->
                 <td class="num"><strong>122.037.043</strong></td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt saepe exercitationem, mollitia fugit, fugiat ab, odio voluptatibus minima adipisci ut nostrum ullam excepturi. Numquam, sequi officia voluptatum nesciunt at ab.</p>
 
 </body>
 
 <!--
     Hierarquia tabelas grandes
     Table = tabela
-        Caption = legenda / título
+        Caption = legenda / título principal
         Thead = cabeçalhos
-            tr, td, th
+            tr, th, td 
         Tbody = corpo / dados
-            tr, td, th
+            tr, th, td 
         Tfoot = rodapé / fechamento (nem sempre se aplica)
-            tr, td, th
+            tr, th, td 
 -->
 </html>
